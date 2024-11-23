@@ -21,9 +21,19 @@
     </style>
   </head>
   <body>
-    <h1>Atualizador de Preços XML</h1>
+    <h1 id="titleUpdateValues">Atualizador de Preços XML</h1>
+    <h1 id="titleUpdatePower" style="display: none">
+      Atualizador de Potência de veiculos XML
+    </h1>
 
-    <form id="xml-form">
+    <button id="updateValues" style="display: none" onclick="togglePages()">
+      Atualizar Valores
+    </button>
+    <button id="updatePower" onclick="togglePages()">
+      Aumento de Potencia de veiculos
+    </button>
+
+    <form id="value-form">
       <label for="xml-input">XML:</label><br />
       <textarea
         id="xml-input"
@@ -44,6 +54,32 @@
       <button type="submit">Atualizar Preços</button>
     </form>
 
+    <form id="power-form" style="display: none">
+      <label for="power-input">XML:</label><br />
+      <textarea
+        id="power-xml-input"
+        rows="8"
+        cols="50"
+        placeholder="Cole o XML aqui"
+      ></textarea
+      ><br /><br />
+
+      <label for="new-price">Porcentagem de aumento de potência:</label><br />
+      <div class="percentage-container">
+        <input
+          type="number"
+          id="power-input-percentage"
+          min="-100"
+          max="100"
+          step="5"
+          placeholder="0"
+        />
+        <span class="percentage-symbol">%</span>
+      </div>
+      <br /><br />
+      <button type="submit">Atualizar Potência</button>
+    </form>
+
     <h2>XML Atualizado</h2>
     <button id="copy-button">Copiar Resultado</button>
     <pre id="output"></pre>
@@ -58,21 +94,22 @@
         });
 
         // Substituir o valor dentro de elementos <price>
-          const priceTags = xmlDoc.getElementsByTagName('price');
-            for (let i = 0; i < priceTags.length; i++) {
-                priceTags[i].textContent = newValue;
-            }
+        const priceTags = xmlDoc.getElementsByTagName("price");
+        for (let i = 0; i < priceTags.length; i++) {
+          priceTags[i].textContent = newValue;
+        }
 
         const serializer = new XMLSerializer();
         return serializer.serializeToString(xmlDoc);
       }
 
       document
-        .getElementById("xml-form")
+        .getElementById("value-form")
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
           const xmlInput = document.getElementById("xml-input").value;
+          document.getElementById("xml-input").value = "";
           const newPrice = document.getElementById("new-price").value;
 
           try {
@@ -83,20 +120,123 @@
               "Erro ao processar o XML.";
           }
 
-          document.getElementById("output").style.display = 'block';
+          document.getElementById("output").style.display = "block";
         });
 
-        document.getElementById('copy-button').addEventListener('click', function() {
-            const output = document.getElementById('output').textContent;
-            if (output) {
-                navigator.clipboard.writeText(output).then(() => {
-                    //alert("XML copiado para a área de transferência!");
-                }).catch(err => {
-                    alert("Falha ao copiar: " + err);
-                });
-            } else {
-                alert("Nada para copiar!");
-            }
+      document
+        .getElementById("copy-button")
+        .addEventListener("click", function () {
+          const output = document.getElementById("output").textContent;
+          document.getElementById("output").textContent = "";
+          document.getElementById("output").style.display = "none";
+          if (output) {
+            navigator.clipboard
+              .writeText(output)
+              .then(() => {
+                //alert("XML copiado para a área de transferência!");
+              })
+              .catch((err) => {
+                alert("Falha ao copiar: " + err);
+              });
+          } else {
+            alert("Nada para copiar!");
+          }
+        });
+
+      function togglePages() {
+        document.getElementById("value-form").style.display =
+          document.getElementById("value-form").style.display == "none"
+            ? "block"
+            : "none";
+
+        document.getElementById("updateValues").style.display =
+          document.getElementById("updateValues").style.display == "none"
+            ? "block"
+            : "none";
+
+        document.getElementById("titleUpdateValues").style.display =
+          document.getElementById("titleUpdateValues").style.display == "none"
+            ? "block"
+            : "none";
+
+        document.getElementById("power-form").style.display =
+          document.getElementById("power-form").style.display == "none"
+            ? "block"
+            : "none";
+
+        document.getElementById("updatePower").style.display =
+          document.getElementById("updatePower").style.display == "none"
+            ? "block"
+            : "none";
+
+        document.getElementById("titleUpdatePower").style.display =
+          document.getElementById("titleUpdatePower").style.display == "none"
+            ? "block"
+            : "none";
+      }
+
+      function calcularPercentual(valor, percentual) {
+        console.log("percentual", percentual);
+        var newValue = 0;
+        if (percentual > 0) {
+          newValue = valor * (1 + percentual / 100);
+        } else if (percentual < 0) {
+          var percentualTranform = Math.abs(percentual);
+          newValue = valor * (1 - percentualTranform / 100);
+        } else {
+          throw new Error("Operação inválida. Use 'aumentar' ou 'diminuir'.");
+        }
+        return newValue.toFixed(2);
+      }
+
+      function replacePowerInXML(xmlString, newValue) {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+        const powerElements = xmlDoc.querySelectorAll("[torqueScale]");
+        console.log("powerElements", powerElements);
+
+        powerElements.forEach((element) => {
+          var power = element.getAttribute("torqueScale");
+          console.log("power", power);
+          element.setAttribute(
+            "torqueScale",
+            calcularPercentual(power, newValue)
+          );
+        });
+
+        const powerHpElements = xmlDoc.querySelectorAll("[hp]");
+        console.log("powerHpElements", powerHpElements);
+
+        powerHpElements.forEach((element) => {
+          var powerHp = element.getAttribute("hp");
+          console.log("powerHp", powerHp);
+          element.setAttribute("hp", calcularPercentual(powerHp, newValue));
+        });
+
+        const serializer = new XMLSerializer();
+        return serializer.serializeToString(xmlDoc);
+      }
+
+      document
+        .getElementById("power-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const xmlInput = document.getElementById("power-xml-input").value;
+          document.getElementById("power-xml-input").value = "";
+          const newPrice = document.getElementById(
+            "power-input-percentage"
+          ).value;
+
+          try {
+            const updatedXml = replacePowerInXML(xmlInput, newPrice);
+            document.getElementById("output").textContent = updatedXml;
+          } catch (error) {
+            document.getElementById("output").textContent =
+              "Erro ao processar o XML.";
+          }
+
+          document.getElementById("output").style.display = "block";
         });
     </script>
   </body>
