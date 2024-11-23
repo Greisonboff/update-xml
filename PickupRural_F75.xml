@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?><vehicle type="car">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Pickup Rural F75</name>
+        <specs>
+            <power>90</power>
+            <maxSpeed>118</maxSpeed>
+			<combination xmlFilename="TinBodywork.xml"/>
+            <combination xmlFilename="WoodBodywork.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_car</function>
+        </functions>
+        <image>store_pickupRuralF75.png</image>
+        <price>0</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <category>cars</category>
+        <vertexBufferMemoryUsage>1508352</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>357632</indexBufferMemoryUsage>
+        <textureMemoryUsage>3080192</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_car</typeDesc>
+        <filename>lizardPickupRural_F75.i3d</filename>
+        <size width="2.3" length="5.2" height="2.5"/>
+        <sounds filename="sounds\pickupRuralF75.xml"/>
+        <components count="1">
+            <component centerOfMass="0 0 0.4" solverIterationCount="10" mass="1350"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="CAR"/>
+        <mapHotspot type="CAR"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+             <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_DEFAULT">
+                <wheels autoRotateBackSpeed="2.5">
+                    <wheel filename="wheels/wheels_F75OEM.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontLeft" forcePointRatio="0.3" initialCompression="20" suspTravel="0.13" spring="16" damper="10" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_F75OEM.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontRight" forcePointRatio="0.3" initialCompression="20" suspTravel="0.13" spring="16" damper="10" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_F75OEM.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelBackLeft" forcePointRatio="0.3" initialCompression="20" suspTravel="0.13" spring="35" damper="10" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_F75OEM.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelBackRight" forcePointRatio="0.3" initialCompression="20" suspTravel="0.13" spring="35" damper="10" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_1">
+                <wheels autoRotateBackSpeed="2.5">
+                    <wheel filename="wheels/wheels_Continental_R18terrainContactHT.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontLeft" forcePointRatio="0.3" initialCompression="20" suspTravel="0.05" spring="92" damper="30" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_Continental_R18terrainContactHT.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontRight" forcePointRatio="0.3" initialCompression="20" suspTravel="0.05" spring="92" damper="30" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_Continental_R18terrainContactHT.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelBackLeft" forcePointRatio="0.3" initialCompression="25" suspTravel="0.06" spring="84" damper="30" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_Continental_R18terrainContactHT.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelBackRight" forcePointRatio="0.3" initialCompression="25" suspTravel="0.06" spring="84" damper="30" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_2">
+                <wheels autoRotateBackSpeed="2.5">
+                    <wheel filename="wheels/wheels_Continantal_offRoadHDO.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontLeft" forcePointRatio="0.3" initialCompression="50" suspTravel="0.05" spring="92" damper="30" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_Continantal_offRoadHDO.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontRight" forcePointRatio="0.3" initialCompression="50" suspTravel="0.05" spring="92" damper="30" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_Continantal_offRoadHDO.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelBackLeft" forcePointRatio="0.3" initialCompression="55" suspTravel="0.06" spring="84" damper="30" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_Continantal_offRoadHDO.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelBackRight" forcePointRatio="0.3" initialCompression="55" suspTravel="0.06" spring="84" damper="30" frictionScale="2.5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="BKT" saveId="BKT_DEFAULT">
+                <wheels autoRotateBackSpeed="2.5">
+                    <wheel filename="wheels/wheels_BKTR12_sierraMaxPro.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontLeft" forcePointRatio="0.3" initialCompression="30" suspTravel="0.05" spring="92" damper="30" frictionScale="5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_BKTR12_sierraMaxPro.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontRight" forcePointRatio="0.3" initialCompression="30" suspTravel="0.05" spring="92" damper="30" frictionScale="5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_BKTR12_sierraMaxPro.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelBackLeft" forcePointRatio="0.3" initialCompression="35" suspTravel="0.06" spring="84" damper="30" frictionScale="5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel filename="wheels/wheels_BKTR12_sierraMaxPro.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="0.5" repr="wheelBackRight" forcePointRatio="0.3" initialCompression="35" suspTravel="0.06" spring="84" damper="30" frictionScale="5" yOffset="0.02"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="32" rotMax="30" rotCenterWheel1="3" rotCenterWheel2="4"/>
+        </ackermannSteeringConfigurations>
+    </wheels>
+
+    <lights>
+		<states>
+            <state lightTypes="0"/>
+            <state lightTypes="0 1"/>
+            <state lightTypes="0 4"/>
+        </states>
+        <sharedLight linkNode="plateNumberL_vis" filename="$data/shared/assets/lights/lizard/plateNumberLight02.xml"/>
+        <sharedLight linkNode="plateNumberR_vis" filename="$data/shared/assets/lights/lizard/plateNumberLight02.xml"/>
+        
+        <realLights>
+            <low>
+                <light node="frontLightLow" lightTypes="0"/>
+            </low>
+            <high>
+                <light node="frontLightHigh" lightTypes="0"/>
+                <light node="highBeamHigh" lightTypes="1 3"/>
+                <light node="painelLight" lightTypes="0 3"/>
+                <light node="cabinLight" lightTypes="4"/>
+                <turnLightLeft node="turnLightLeftFront"/>
+                <turnLightRight node="turnLightRightFront"/>
+                <light node="licencePlateLight" lightTypes="0"/>
+            </high>
+        </realLights>
+        <defaultLights>
+            <defaultLight shaderNode="frontLightVis_L" lightTypes="0 3"/>
+			<defaultLight shaderNode="frontLightVis_R" lightTypes="0 3"/>
+            <defaultLight shaderNode="internaLight_vis" lightTypes="4" intensity="6"/>
+        </defaultLights>
+
+        <turnLights>
+            <turnLightLeft shaderNode="turnLightVis_L"/>
+            <turnLightRight shaderNode="turnLightVis_R"/>
+        </turnLights>
+
+        <dashboards>
+            <dashboard displayType="ROT" valueType="turnLight" node="leverTurnlight" minRot="-52.2 10.5 9.8" maxRot="-52.2 -10.8 36.6" doInterpolation="true"/>
+            <dashboard displayType="EMITTER" valueType="lightState" node="defaultLight_decal" intensity="0.2" lightTypes="0" baseColor="SHARED_BLACK2" emitColor="GREEN" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" valueType="turnLightLeft" node="turnLightLeft_decal" baseColor="SHARED_BLACK2" intensity="0.5"/>
+            <dashboard displayType="EMITTER" valueType="turnLightRight" node="turnLightRight_decal" baseColor="SHARED_BLACK2" intensity="0.5"/>
+        </dashboards>
+    </lights>
+
+    <speedRotatingParts>
+		<speedRotatingPart node="Cardan" wheelIndex="1" wheelScale="3"/>
+	</speedRotatingParts>
+
+    <licensePlates defaultPlacement="BOTH">
+        <licensePlate node="licensePlateFront" position="FRONT" preferedType="SQUARISH" placementArea="0.06 0.2 0.2 0.2"/>
+        <licensePlate node="licensePlateBack" position="BACK" preferedType="SQUARISH" placementArea="0.08 0.15 0.08 0.15"/>
+    </licensePlates>
+
+    <enterable isTabbable="true">
+        <enterReferenceNode node="ruralF75_mainComponent"/>
+        <exitPoint node="exitPoint"/>
+
+        <cameras count="2">
+            <camera node="outdoorCamera1" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="5.5" transMax="45" translation="0 0 5.75" rotation="-10 180 0">
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+            </camera>
+            <camera node="indoorCamera1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" positionSmoothingParameter="0" shadowFocusBox="shadowFocusBox"/>
+        </cameras>
+
+        <mirrors>
+            <mirror node="mirrorDecalL" prio="1"/>
+            <mirror node="mirrorDecalR" prio="1"/>
+            <mirror node="mirrorDecalC" prio="1"/>
+        </mirrors>
+
+        <characterNode node="player_skin" cameraMinDistance="0.5" spineRotation="-90 0 90">
+            <target ikChain="rightFoot" targetNode="player_rightFoot"/>
+            <target ikChain="leftFoot" targetNode="player_leftFoot"/>
+            <target ikChain="rightArm" targetNode="rightArm"/>
+            <target ikChain="leftArm" targetNode="leftArm"/>
+        </characterNode>
+
+        <characterTargetNodeModifier node="player_rightFoot" transitionTime="0.1">
+            <state node="player_rightFootGas" referenceNode="pedalAcelerador"/>
+            <state node="player_rightFootBrake" referenceNode="pedalFreio"/>
+        </characterTargetNodeModifier>
+
+        <characterTargetNodeModifier node="player_leftFoot" transitionTime="0.1">
+            <state node="playerLeftFootTargetClutch" referenceNode="clutchPedal"/>
+        </characterTargetNodeModifier>
+
+       <passengerSeats>
+            <passengerSeat node="passengerSeat01" exitPoint="passengerSeat01ExitPoint" outdoorCameraIndex="1">
+                <camera node="passengerSeat01Camera" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" useOutdoorSounds="true" positionSmoothingParameter="0" shadowFocusBox="shadowFocusBox"/>
+                <characterNode node="passengerSeat01PlayerSkin" cameraMinDistance="0.5" spineRotation="-90 0 90">
+                    <target ikChain="leftArm" targetNode="passengerSeat01PlayerLeftHand" poseId="flatFingers"/>
+                    <target ikChain="rightArm" targetNode="passengerSeat01PlayerRightHand" poseId="flatFingers"/>
+                    <target ikChain="leftFoot" targetNode="passengerSeat01PlayerLeftFoot"/>
+                    <target ikChain="rightFoot" targetNode="passengerSeat01PlayerRightFoot"/>
+                </characterNode>
+            </passengerSeat>
+        </passengerSeats>
+    </enterable>
+
+   <attacherJoints>
+		<attacherJoint node="trailerAttacherJointBack" jointType="BodyworksF75" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false">
+           <!--  <objectChange node="licensePlateBack"  translationActive="0.82 0.400 -4.51" translationInactive="0.909 0.709 -4.379" /> -->
+			<schema position="1 0" rotation="0" invertX="false"/>
+		</attacherJoint>
+		
+	</attacherJoints>
+
+   <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01"/>
+        </sounds>
+        <steeringWheel node="steeringWheel" indoorRotation="540" outdoorRotation="60"/>
+        <dashboards>
+            <dashboard displayType="ROT" valueType="accelerationAxis" node="pedalAcelerador" minRot="10 0 0" maxRot="0 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="decelerationAxis" node="pedalFreio" minRot="0" maxRot="13" rotAxis="1" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </drivable>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="66">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="loadingBarFuel" minValueAnim="0" maxValueAnim="66" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <motorized statsType="car">
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="55" fillType="diesel"/> <!-- usage is per hour at max load and max rpm -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.8" wheelIndex1="1" wheelIndex2="2"/> <!-- front left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.8" wheelIndex1="3" wheelIndex2="4"/> <!-- back left-right -->
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.8" differentialIndex1="1" differentialIndex2="2"/> <!-- front-back -->
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+            <motorConfiguration name="Pickup F75 2.6 BF-161" hp="90" price="0">
+                <motor torqueScale=".29" minRpm="1000" maxRpm="4400" maxForwardSpeed="118" maxBackwardSpeed="22" dampingRateScale="0.4" brakeForce="1.7" lowBrakeForceScale="0.22">
+                    <torque rpm="1000" torque="0.9"/>
+                    <torque rpm="1600" torque="1"/>
+                    <torque rpm="2200" torque="1"/>
+                    <torque rpm="2800" torque="0.75"/>
+                    <torque rpm="3400" torque="0.63"/>
+                    <torque rpm="4400" torque="0.3"/>
+                </motor>
+                <transmission autoGearChangeTime="1" gearChangeTime="0.4" name="$l10n_info_transmission_manual" axleRatio="25" startGearThreshold="0.35">
+                    <directionChange useGear="true"/>
+                     <backwardGear gearRatio="4.100" name="R"/>
+                    <forwardGear gearRatio="1.65"/>
+                    <forwardGear gearRatio="1.1"/>
+                    <forwardGear gearRatio=".8"/>
+                    <forwardGear gearRatio=".45"/>              
+                </transmission>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <gearLevers>
+            <gearLever node="leverGears" centerAxis="3" changeTime="0.3" handsOnDelay="0.2">
+                <state gear="-1" xRot="0" zRot="10"/>
+                <state gear="1" xRot="10" zRot="-10"/>
+                <state gear="2" xRot="-10" zRot="-10"/>
+                <state gear="3" xRot="10" zRot="0"/>
+                <state gear="4" xRot="-10" zRot="0"/>
+            </gearLever>
+        </gearLevers>
+        <exhaustEffects>
+			<exhaustEffect node="exhaustParticleLeft" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.01 0.01 0.01 3" maxRpmColor="0 0 0 10" minRpmScale="0.1" maxRpmScale="0.35"/>
+        </exhaustEffects>
+        <dashboards>
+            <dashboard displayType="ANIMATION" valueType="speed" animName="speedDisplay" minValueAnim="0" maxValueAnim="140" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="clutchPedal" node="clutchPedal" minRot="13" maxRot="0" rotAxis="1" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </motorized>
+
+    <animations>
+        <animation name="speedDisplay">
+            <part node="speed_indicator" startTime="0" endTime="1" startRot="140 84 90" endRot="-110 84 90"/>
+        </animation>
+        <animation name="loadingBarFuel">
+            <part node="fuel_indicator" startTime="0" endTime="1" startRot="4 0 -35" endRot="4 0 35"/>
+        </animation>
+        <animation name="wiperFrontAnimation">
+            <part node="wiperRight" startTime="0" endTime="0.4" startRot="180 -73.24 90" endRot="85 -73.24 90"/>
+            <part node="wiperRight" startTime="0.4" endTime=".8" startRot="180 -73.24 90" endRot="85 -73.24 90"/>
+            <part node="wiperLeft" startTime="0" endTime="0.4" startRot="180 -69 90" endRot="85 -69 90"/>
+            <part node="wiperLeft" startTime="0.4" endTime=".8" startRot="180 -69 90" endRot="85 -69 90"/>
+            <sound template="wiper1" startTime="0" endTime="0.8" direction="1" volumeScale="1" pitchScale="0.7" fadeOut="0.1" linkNode="wiperRight"/>
+            <sound template="wiper2" startTime="0" endTime="0.8" direction="-1" volumeScale="1" pitchScale="0.7" fadeOut="0.1" linkNode="wiperLeft"/>
+        </animation>
+    </animations>
+
+    <wipers>
+        <wiper animName="wiperFrontAnimation">
+            <state animSpeed="0.75" animPause="2.0"/>
+            <state animSpeed="0.75" animPause="0.0"/>
+            <state animSpeed="1.10" animPause="0.0"/>
+        </wiper>
+    </wipers>
+
+    <suspensions>
+        <suspension useCharacterTorso="true" weight="90" minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1"/>
+    </suspensions>
+
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="doorRight" playSound="true">
+                <controls axis="AXIS_CRANE_ARM4" invertAxis="false" mouseSpeedFactor="1" iconName="TOP_DOOR_ROTATE"/>
+                <rotation rotSpeed="50" rotAcceleration="300" rotMax="60" rotMin="0" rotationAxis="2"/>
+            </movingTool>
+            <movingTool node="doorLeft" playSound="true">
+                <controls axis="AXIS_CRANE_ARM" invertAxis="false" mouseSpeedFactor="1" iconName="TOP_DOOR_ROTATE"/>
+                <rotation rotSpeed="50" rotAcceleration="300" rotMax="0" rotMin="-60" rotationAxis="2"/>
+            </movingTool>
+        </movingTools>
+        
+    </cylindered>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" isMotorStarting="true"/>
+            <group name="MOTOR_ACTIVE" isMotorStarting="true" isMotorRunning="true"/>
+        </groups>
+    </dashboard>
+
+    <ai>
+        <agent width="1.85" length="5.2" height="1.85" lengthOffset="1.22" frontOffset="3.08"/>
+        <collisionTrigger node="aiCollisionNode" width="2.3" height="2.2"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.15" maxX="1.15" minZ="-3" maxZ="2.5" yOffset="0.4"/>
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="F75_mainPaintOutside_mat" baseNode="visualMain">
+             <shaderParameter name="colorMat0" value="1 1 0 40"/>
+        </material>
+		<material name="interna_mat" baseNode="cor_Interior">
+             <shaderParameter name="colorMat0" value="1 1 0 40"/>
+        </material>	
+        <material name="chassi_mat" baseNode="backBumper">
+            <shaderParameter name="colorMat1" value="1 1 0 40"/>
+       </material>	
+    </baseMaterial>
+
+    <baseMaterialConfigurations price="0" useDefaultColors="false" defaultColorIndex="0">
+        <baseMaterialConfiguration name="$l10n_New_Nepal_Orange" color="0.8 0.15 0" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged_Nepal_Orange" color="0.8 0.15 0" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Nepal_Orange" color="0.8 0.15 0" material="27" price="0"/>
+		
+		<baseMaterialConfiguration name="$l10n_New_Alpine_White" color="0.9 .9 .8" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged Alpine_White" color="0.9 .9 .8" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Alpine_White" color="0.9 0.9 .8" material="27" price="0"/>
+		
+		<baseMaterialConfiguration name="$l10n_New_Beige_Raft" color="0.658 0.558 0.392" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged_Beige_Raft" color="0.658 0.558 0.392" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Beige_Raft" color="0.658 0.558 0.392" material="27" price="0"/>
+		
+		<baseMaterialConfiguration name="$l10n_New_Tropical_Green" color="0.109 0.270 0.175" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged_Tropical_Green" color="0.109 0.270 0.175" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Tropical_Green" color="0.109 0.270 0.175" material="27" price="0"/>
+		
+		<baseMaterialConfiguration name="$l10n_New_Pampa_Green" color="0.258 0.283 0.141" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged_Pampa_Green" color="0.258 0.283 0.141" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Pampa_Green" color="0.258 0.283 0.141" material="27" price="0"/>
+		
+		<baseMaterialConfiguration name="$l10n_New_Jungle_Green" color="0.070 0.089 0.053" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged_Jungle_Green" color="0.070 0.089 0.053" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Jungle_Green" color="0.070 0.089 0.053" material="27" price="0"/>
+		
+		<baseMaterialConfiguration name="$l10n_New_Royal_Torquoise" color="0.003 0.491 0.462" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged_Royal_Torquoise" color="0.003 0.491 0.462" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Royal_Torquoise" color="0.003 0.491 0.462" material="27" price="0"/>
+		
+		<baseMaterialConfiguration name="$l10n_New_Colonial_Blue" color="0.000 0.147 0.275" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged_Colonial_Blue" color="0.000 0.147 0.275" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Colonial_Blue" color="0.000 0.147 0.275" material="27" price="0"/>
+		
+		<baseMaterialConfiguration name="$l10n_New_Cinnamon_Brown" color="0.1293 0.1047 0.0836" material="32" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Aged_Cinnamon_Brown" color="0.1293 0.1047 0.0836" material="6" price="0"/>
+		<baseMaterialConfiguration name="$l10n_Metallic_Cinnamon_Brown" color="0.1293 0.1047 0.0836" material="27" price="0"/>
+		
+        <baseMaterialConfiguration name="$l10n_New_Cardinal_Red" color="0.205 0.005 0.003" material="32" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Aged_Cardinal_Red" color="0.205 0.005 0.003" material="6" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Metallic_Cardinal_Red" color="0.205 0.005 0.003" material="27" price="0"/>
+		
+        <baseMaterialConfiguration name="$l10n_New_Cadmium_Red" color="0.680 0.006 0.002" material="32" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Aged_Cadmium_Red" color="0.680 0.006 0.002" material="6" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Metallic_Cadmium_Red" color="0.680 0.006 0.002" material="27" price="0"/>
+		
+        <baseMaterialConfiguration name="$l10n_New_Itapoa_Yellow" color="0.831 0.558 0" material="32" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Aged Itapoa_Yellow" color="0.831 0.558 0" material="6" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Metallic_Itapoa_Yellow" color="0.831 0.558 0" material="27" price="0"/>
+		
+        <baseMaterialConfiguration name="$l10n_New_Lady_Pink" color="1.000 0.162 0.610" material="32" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Aged Lady_Pink" color="1.000 0.162 0.610" material="6" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Metallic_Lady_Pink" color="1.000 0.162 0.610" material="27" price="0"/>
+
+        <baseMaterialConfiguration name="$l10n_New_Gray" color="0.15 0.15 0.15" material="32" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Aged_Gray" color="0.15 0.15 0.15" material="6" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Metallic_Gray" color="0.15 0.15 0.15" material="27" price="0"/>
+
+        <baseMaterialConfiguration name="$l10n_New_Black" color="0.015 0.015 0.015" material="32" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Aged_Black" color="0.015 0.015 0.015" material="6" price="0"/>
+        <baseMaterialConfiguration name="$l10n_Metallic_Black" color="0.015 0.015 0.015" material="27" price="0"/>
+             
+        <material name="F75_mainPaintOutside_mat" shaderParameter="colorMat0"/>
+		<material name="interna_mat" shaderParameter="colorMat0"/>
+	
+    </baseMaterialConfigurations>
+
+    <designMaterialConfigurations price="0" useDefaultColors="false" title="$l10n_configuration_bumperColor" Index="3">
+        <designMaterialConfiguration name="$l10n_color_pure_white" color="STOLL_WHITE2" material="32" price="0"/>
+        <designMaterialConfiguration name="$l10n_color_pearl_white" color="STOLL_WHITE2" material="27" price="0"/>
+        <designMaterialConfiguration name="$l10n_color_stainless_steel" color="1 1 1" material="27" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_dark_steel" color="0.35 0.35 0.40" material="8" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_aluminum" color="0.65 0.65 0.75" material="3" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_chrome" color="0.9 0.9 1" material="2" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_chrome_black" color="0.155 0.155 0.155" material="2" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_white_gold" color="0.973 0.976 0.545" material="27" price="0"/>
+        <designMaterialConfiguration name="$l10n_color_bronze_fire" color="0.153 0.029 0.01" material="27" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_black" color="0.02 0.02 0.02" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_black_aged" color="0.017 0.017 0.017" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_gun_metal" color="SHARED_GREY5" material="27" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_dark_moon" color="0.02 0.02 0.02" material="27" price="0"/>
+		<designMaterialConfiguration name="$l10n_color_new_silver" color="SHARED_GREY2" material="27" price="0"/>
+
+        <designMaterialConfiguration name="$l10n_New_Nepal_Orange" color=".8 0.15 0" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged_Nepal_Orange" color=".8 0.15 0" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Nepal_Orange" color=".8 0.15 0" material="27" price="0"/>
+		
+		<designMaterialConfiguration name="$l10n_New_Alpine_White" color="0.9 .9 .8" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged Alpine_White" color="0.9 .9 .8" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Alpine_White" color="0.9 .9 .8" material="27" price="0"/>
+		
+		<designMaterialConfiguration name="$l10n_New_Beige_Raft" color="0.658 0.558 0.392" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged_Beige_Raft" color="0.658 0.558 0.392" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Beige_Raft" color="0.658 0.558 0.392" material="27" price="0"/>
+		
+		<designMaterialConfiguration name="$l10n_New_Tropical_Green" color="0.109 0.270 0.175" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged_Tropical_Green" color="0.109 0.270 0.175" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Tropical_Green" color="0.109 0.270 0.175" material="27" price="0"/>
+		
+		<designMaterialConfiguration name="$l10n_New_Pampa_Green" color="0.258 0.283 0.141" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged_Pampa_Green" color="0.258 0.283 0.141" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Pampa_Green" color="0.258 0.283 0.141" material="27" price="0"/>
+		
+		<designMaterialConfiguration name="$l10n_New_Jungle_Green" color="0.070 0.089 0.053" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged_Jungle_Green" color="0.070 0.089 0.053" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Jungle_Green" color="0.070 0.089 0.053" material="27" price="0"/>
+		
+		<designMaterialConfiguration name="$l10n_New_Royal_Torquoise" color="0.003 0.491 0.462" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged_Royal_Torquoise" color="0.003 0.491 0.462" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Royal_Torquoise" color="0.003 0.491 0.462" material="27" price="0"/>
+		
+		<designMaterialConfiguration name="$l10n_New_Colonial_Blue" color="0.000 0.147 0.275" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged_Colonial_Blue" color="0.000 0.147 0.275" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Colonial_Blue" color="0.000 0.147 0.275" material="27" price="0"/>
+		
+		<designMaterialConfiguration name="$l10n_New_Cinnamon_Brown" color="0.1293 0.1047 0.0836" material="32" price="0"/>
+		<designMaterialConfiguration name="$l10n_Aged_Cinnamon_Brown" color="0.1293 0.1047 0.0836" material="6" price="0"/>
+		<designMaterialConfiguration name="$l10n_Metallic_Cinnamon_Brown" color="0.1293 0.1047 0.0836" material="27" price="0"/>
+		
+        <designMaterialConfiguration name="$l10n_New_Cardinal_Red" color="0.205 0.005 0.003" material="32" price="0"/>
+        <designMaterialConfiguration name="$l10n_Aged_Cardinal_Red" color="0.205 0.005 0.003" material="6" price="0"/>
+        <designMaterialConfiguration name="$l10n_Metallic_Cardinal_Red" color="0.205 0.005 0.003" material="27" price="0"/>
+		
+        <designMaterialConfiguration name="$l10n_New_Cadmium_Red" color="0.680 0.006 0.002" material="32" price="0"/>
+        <designMaterialConfiguration name="$l10n_Aged_Cadmium_Red" color="0.680 0.006 0.002" material="6" price="0"/>
+        <designMaterialConfiguration name="$l10n_Metallic_Cadmium_Red" color="0.680 0.006 0.002" material="27" price="0"/>
+		
+        <designMaterialConfiguration name="$l10n_New_Itapoa_Yellow" color="0.831 0.558 0" material="32" price="0"/>
+        <designMaterialConfiguration name="$l10n_Aged Itapoa_Yellow" color="0.831 0.558 0" material="6" price="0"/>
+        <designMaterialConfiguration name="$l10n_Metallic_Itapoa_Yellow" color="0.831 0.558 0" material="27" price="0"/>
+		
+        <designMaterialConfiguration name="$l10n_New_Lady_Pink" color="1.000 0.162 0.610" material="32" price="0"/>
+        <designMaterialConfiguration name="$l10n_Aged Lady_Pink" color="1.000 0.162 0.610" material="6" price="0"/>
+        <designMaterialConfiguration name="$l10n_Metallic_Lady_Pink" color="1.000 0.162 0.610" material="27" price="0"/>
+
+        <designMaterialConfiguration name="$l10n_New_Gray" color="0.15 0.15 0.15" material="32" price="0"/>
+        <designMaterialConfiguration name="$l10n_Aged_Gray" color="0.15 0.15 0.15" material="6" price="0"/>
+        <designMaterialConfiguration name="$l10n_Metallic_Gray" color="0.15 0.15 0.15" material="27" price="0"/>
+
+        <designMaterialConfiguration name="$l10n_New_Black" color="0.015 0.015 0.015" material="32" price="0"/>
+        <designMaterialConfiguration name="$l10n_Aged_Black" color="0.015 0.015 0.015" material="6" price="0"/>
+        <designMaterialConfiguration name="$l10n_Metallic_Black" color="0.015 0.015 0.015" material="27" price="0"/>
+             
+        <material name="chassi_mat" shaderParameter="colorMat1"/>
+	
+    </designMaterialConfigurations>
+
+    <rimColorConfigurations useDefaultColors="false" price="0">		
+		<rimColorConfiguration name="$l10n_color_stainless_steel" color="1 1 1" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_color_dark_steel" color="0.35 0.35 0.40" material="8" price="0"/>
+		<rimColorConfiguration name="$l10n_color_aluminum" color="0.65 0.65 0.75" material="3" price="0"/>
+		<rimColorConfiguration name="$l10n_color_chrome" color="0.9 0.9 1" material="2" price="0"/>
+		<rimColorConfiguration name="$l10n_color_chrome_black" color="0.155 0.155 0.155" material="2" price="0"/>
+		<rimColorConfiguration name="$l10n_color_white_gold" color="0.973 0.976 0.545" material="27" price="0"/>
+        <rimColorConfiguration name="$l10n_color_bronze_fire" color="0.153 0.029 0.01" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_color_pure_white" color="STOLL_WHITE2" material="0" price="0"/>
+		<rimColorConfiguration name="$l10n_color_pearl_white" color="STOLL_WHITE2" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_color_black" color="0.02 0.02 0.02" material="0" price="0"/>
+		<rimColorConfiguration name="$l10n_color_black_aged" color="0.017 0.017 0.017" material="6" price="0"/>
+		<rimColorConfiguration name="$l10n_color_gun_metal" color="SHARED_GREY5" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_color_dark_moon" color="0.02 0.02 0.02" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_color_new_silver" color="SHARED_GREY2" material="27" price="0"/>
+
+        <rimColorConfiguration name="$l10n_New_Nepal_Orange" color=".8 0.15 0" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Nepal_Orange" color=".8 0.15 0" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_New_Alpine_White" color="0.9 .9 .8" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Alpine_White" color="0.9 .9 .8" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_New_Beige_Raft" color="0.658 0.558 0.392" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Beige_Raft" color="0.658 0.558 0.392" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_New_Tropical_Green" color="0.109 0.270 0.175" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Tropical_Green" color="0.109 0.270 0.175" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_New_Pampa_Green" color="0.258 0.283 0.141" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Pampa_Green" color="0.258 0.283 0.141" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_New_Jungle_Green" color="0.070 0.089 0.053" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Jungle_Green" color="0.070 0.089 0.053" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_New_Royal_Torquoise" color="0.003 0.491 0.462" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Royal_Torquoise" color="0.003 0.491 0.462" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_New_Colonial_Blue" color="0.000 0.147 0.275" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Colonial_Blue" color="0.000 0.147 0.275" material="27" price="0"/>
+		<rimColorConfiguration name="$l10n_New_Cinnamon_Brown" color="0.1293 0.1047 0.0836" material="32" price="0"/>
+		<rimColorConfiguration name="$l10n_Metallic_Cinnamon_Brown" color="0.1293 0.1047 0.0836" material="27" price="0"/>
+        <rimColorConfiguration name="$l10n_New_Cardinal_Red" color="0.205 0.005 0.003" material="32" price="0"/>
+        <rimColorConfiguration name="$l10n_Metallic_Cardinal_Red" color="0.205 0.005 0.003" material="27" price="0"/>
+        <rimColorConfiguration name="$l10n_New_Cadmium_Red" color="0.680 0.006 0.002" material="32" price="0"/>
+        <rimColorConfiguration name="$l10n_Metallic_Cadmium_Red" color="0.680 0.006 0.002" material="27" price="0"/>
+        <rimColorConfiguration name="$l10n_New_Itapoa_Yellow" color="0.831 0.558 0" material="32" price="0"/>
+        <rimColorConfiguration name="$l10n_Metallic_Itapoa_Yellow" color="0.831 0.558 0" material="27" price="0"/>
+        <rimColorConfiguration name="$l10n_New_Lady_Pink" color="1.000 0.162 0.610" material="32" price="0"/>
+        <rimColorConfiguration name="$l10n_Metallic_Lady_Pink" color="1.000 0.162 0.610" material="27" price="0"/>
+        <rimColorConfiguration name="$l10n_New_Gray" color="0.15 0.15 0.15" material="32" price="0"/>
+        <rimColorConfiguration name="$l10n_Metallic_Gray" color="0.15 0.15 0.15" material="27" price="0"/>
+        <rimColorConfiguration name="$l10n_New_Black" color="0.015 0.015 0.015" material="32" price="0"/>
+        <rimColorConfiguration name="$l10n_Metallic_Black" color="0.015 0.015 0.015" material="27" price="0"/>
+	</rimColorConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="ruralF75_mainComponent" node="0&gt;"/>
+        <i3dMapping id="wheelFrontLeft" node="0&gt;0|0"/>
+        <i3dMapping id="wheelBackLeft" node="0&gt;0|1"/>
+        <i3dMapping id="wheelFrontRight" node="0&gt;0|2"/>
+        <i3dMapping id="wheelBackRight" node="0&gt;0|3"/>
+        
+        <i3dMapping id="outdoorCameraTarget" node="0&gt;1|0"/>
+        <i3dMapping id="outdoorCamera1" node="0&gt;1|0|0"/>
+        <i3dMapping id="indoorCamera1" node="0&gt;1|1"/>
+        <i3dMapping id="cameraRaycastNode1" node="0&gt;1|2"/>
+        <i3dMapping id="cameraRaycastNode2" node="0&gt;1|3"/>
+        <i3dMapping id="cameraRaycastNode3" node="0&gt;1|4"/>
+        <i3dMapping id="shadowFocusBox" node="0&gt;1|5"/>
+        
+        <i3dMapping id="frontLightHigh" node="0&gt;2|0"/>
+        <i3dMapping id="highBeamHigh" node="0&gt;2|1"/>
+        <i3dMapping id="turnLightRightFront" node="0&gt;2|2"/>
+        <i3dMapping id="turnLightLeftFront" node="0&gt;2|3"/>
+		<i3dMapping id="frontLightLow" node="0&gt;2|4"/>      
+        <i3dMapping id="painelLight" node="0&gt;2|5"/>
+        <i3dMapping id="cabinLight" node="0&gt;2|6"/>
+        <i3dMapping id="licencePlateLight" node="0&gt;2|7"/>
+
+        <i3dMapping id="exitPoint" node="0&gt;3"/>
+
+        <i3dMapping id="steeringWheel" node="0&gt;4|0"/>
+        <i3dMapping id="leftArm" node="0&gt;4|0|0|0|0"/>
+        <i3dMapping id="rightArm" node="0&gt;4|0|0|0|1"/>
+
+        <i3dMapping id="pedalAcelerador" node="0&gt;5|0"/>
+        <i3dMapping id="player_rightFootGas" node="0&gt;5|0|0"/>
+        <i3dMapping id="pedalFreio" node="0&gt;5|1"/>
+        <i3dMapping id="player_rightFootBrake" node="0&gt;5|1|1"/>
+		<i3dMapping id="clutchPedal" node="0&gt;5|2"/>
+        <i3dMapping id="playerLeftFootTargetClutch" node="0&gt;5|2|1"/>
+
+        <i3dMapping id="trailerAttacherJointBack" node="0&gt;6|0"/>
+
+        <i3dMapping id="player_skin" node="0&gt;7|0"/>
+        <i3dMapping id="player_rightFoot" node="0&gt;7|1"/>
+        <i3dMapping id="player_leftFoot" node="0&gt;7|2"/>
+
+        <i3dMapping id="aiCollisionTrigger" node="0&gt;8|0"/>
+
+        <i3dMapping id="exhaustParticleLeft" node="0&gt;9|0"/>
+
+        <i3dMapping id="doorLeft" node="0&gt;10|0"/>
+        <i3dMapping id="mirrorDecalL" node="0&gt;10|0|2|0|0"/>
+        <i3dMapping id="mirrorDecalR" node="0&gt;10|1|2|0|0"/>
+        <i3dMapping id="doorRight" node="0&gt;10|1"/>
+        <i3dMapping id="cor_portasInt" node="0&gt;10|1|3"/>
+
+        <i3dMapping id="wiperRight" node="0&gt;11|0|1"/>
+        <i3dMapping id="wiperLeft" node="0&gt;11|1|1"/>
+
+        <i3dMapping id="speed_indicator" node="0&gt;12|0|0"/>
+        <i3dMapping id="fuel_indicator" node="0&gt;12|1|0"/>
+        <i3dMapping id="leverTurnlight" node="0&gt;12|2|0"/>
+        <i3dMapping id="leverGears" node="0&gt;12|3"/>
+        <i3dMapping id="turnLightLeft_decal" node="0&gt;12|4"/>
+        <i3dMapping id="turnLightRight_decal" node="0&gt;12|5"/>
+        <i3dMapping id="defaultLight_decal" node="0&gt;12|6"/>
+        
+        <i3dMapping id="backBumper" node="0&gt;13|0|4"/>
+        <i3dMapping id="Cardan" node="0&gt;13|0|7|0"/>
+        <i3dMapping id="visualMain" node="0&gt;13|1|0"/>
+        <i3dMapping id="frontLightVis_L" node="0&gt;13|1|7|1"/>
+		<i3dMapping id="frontLightVis_R" node="0&gt;13|1|8|1"/>
+        <i3dMapping id="turnLightVis_L" node="0&gt;13|1|9|1"/>
+        <i3dMapping id="turnLightVis_R" node="0&gt;13|1|10|1"/>
+        <i3dMapping id="cor_Interior" node="0&gt;13|2|5|0"/>
+        <i3dMapping id="mirrorDecalC" node="0&gt;13|3|1|0"/>
+        
+        <i3dMapping id="licensePlateFront" node="0&gt;15"/>
+        
+        <i3dMapping id="licensePlateBack" node="0&gt;16"/>
+
+        <i3dMapping id="passengerSeat01" node="0&gt;17|0"/>
+        <i3dMapping id="passengerSeat01Camera" node="0&gt;17|0|0"/>
+        <i3dMapping id="passengerSeat01PlayerSkin" node="0&gt;17|0|1"/>
+        <i3dMapping id="passengerSeat01PlayerLeftFoot" node="0&gt;17|0|2"/>
+        <i3dMapping id="passengerSeat01PlayerRightFoot" node="0&gt;17|0|3"/>
+        <i3dMapping id="passengerSeat01PlayerLeftHand" node="0&gt;17|0|4"/>
+        <i3dMapping id="passengerSeat01PlayerRightHand" node="0&gt;17|0|5"/>
+        <i3dMapping id="passengerSeat01ExitPoint" node="0&gt;17|0|6"/>
+
+        <i3dMapping id="aiCollisionNode" node="0&gt;8|0"/>
+
+        <i3dMapping id="internaLight_vis" node="0&gt;2|8|0"/>
+        <i3dMapping id="plateNumberL_vis" node="0&gt;2|9"/>
+        <i3dMapping id="plateNumberR_vis" node="0&gt;2|10"/>
+
+    </i3dMappings>
+</vehicle>
