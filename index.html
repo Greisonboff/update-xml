@@ -1,95 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atualizar Preços em XML</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      #output {
-        border: 1px solid;
-        max-width: 396px;
-        width: 100%;
-        padding: 10px;
-        display: none;
-        overflow: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1 id="titleUpdateValues">Atualizador de Preços XML</h1>
-    <h1 id="titleUpdatePower" style="display: none">
-      Atualizador de Potência de veiculos XML
-    </h1>
+  <body class="updateValues">
+    
 
-    <button id="updateValues" style="display: none" onclick="togglePages()">
-      Atualizar Valores
-    </button>
-    <button id="updatePower" onclick="togglePages()">
-      Aumento de Potencia de veiculos
-    </button>
-
-    <form id="value-form">
-      <label for="xml-input">XML:</label><br />
-      <textarea
+      <h1>FS22 — Editor de Veículos XML</h1>
+      
+    <p>Atualize preços e potência dos seus veículos</p>
+    
+    <div class="button-container-header">
+      <button id="updateValues" onclick="togglePages(event)">
+        Atualizar Valores
+      </button>
+      <button id="updatePower" onclick="togglePages(event)">
+        Aumento de Potencia de veiculos
+      </button>
+    </div>
+    
+    <div class="forms-container">
+      <h2 id="price">Atualizador de Preços</h2>
+      <h2 id="power">Atualizador de Potência</h2>
+      
+      <form id="value-form">
+        <label for="xml-input">XML:</label>
+        <textarea
         id="xml-input"
         rows="8"
         cols="50"
         placeholder="Cole o XML aqui"
-      ></textarea
-      ><br /><br />
-
-      <label for="new-price">Novo Valor para price:</label><br />
-      <input
-        type="text"
-        id="new-price"
-        placeholder="Insira o novo preço"
-        required
-      /><br /><br />
-
-      <button type="submit">Atualizar Preços</button>
-    </form>
-
-    <form id="power-form" style="display: none">
-      <label for="power-input">XML:</label><br />
-      <textarea
-        id="power-xml-input"
-        rows="8"
-        cols="50"
-        placeholder="Cole o XML aqui"
-      ></textarea
-      ><br /><br />
-
-      <label for="new-price">Porcentagem de aumento de potência:</label><br />
-      <div class="percentage-container">
+        ></textarea>
+        
+        <label for="new-price">Novo Valor para price:</label>
         <input
-          type="number"
-          id="power-input-percentage"
-          min="-100"
-          max="100"
-          step="5"
-          placeholder="0"
-        />
-        <span class="percentage-symbol">%</span>
-      </div>
-      <br /><br />
-      <button type="submit">Atualizar Potência</button>
-    </form>
+        type="nu"
+        mber
+        id="new-price"
+          placeholder="Insira o novo preço"
+          required
+          />
+          
+          <button type="submit">Atualizar Preços</button>
+        </form>
+        
+        <form id="power-form">
+          <label for="power-input">XML:</label>
+          <textarea
+          id="power-xml-input"
+          rows="8"
+          cols="50"
+          placeholder="Cole o XML aqui"
+          ></textarea>
+          
+          <label for="new-price">Porcentagem de aumento de potência:</label>
+          <div class="percentage-container">
+            <input type="number" id="power-input-percentage" placeholder="0" />
+            <span class="percentage-symbol">%</span>
+          </div>
+          
+          <button type="submit">Atualizar Potência</button>
+        </form>
+    </div>
 
-    <h2>XML Atualizado</h2>
-    <button id="copy-button">Copiar Resultado</button>
-    <pre id="output"></pre>
+    <div id="output-container">
+<div class="output-container-header">
+  
+  <h2>XML Atualizado</h2>
+  <button id="copy-button">Copiar Resultado</button>
+</div>
+<pre id="output"></pre>
+</div>
 
-    <script>
-      function replacePricesInXML(xmlString, newValue) {
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlString, "text/xml");
-        const priceElements = xmlDoc.querySelectorAll("[price]");
-        priceElements.forEach((element) => {
+<script>
+  function replacePricesInXML(xmlString, newValue) {
+    const parser = new DOMParser();
+    
+    const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+    const priceElements = xmlDoc.querySelectorAll("[price]");
+    priceElements.forEach((element) => {
           element.setAttribute("price", newValue);
         });
 
@@ -120,7 +112,7 @@
               "Erro ao processar o XML.";
           }
 
-          document.getElementById("output").style.display = "block";
+          document.getElementById("output-container").style.display = "block";
         });
 
       document
@@ -128,7 +120,7 @@
         .addEventListener("click", function () {
           const output = document.getElementById("output").textContent;
           document.getElementById("output").textContent = "";
-          document.getElementById("output").style.display = "none";
+          document.getElementById("output-container").style.display = "none";
           if (output) {
             navigator.clipboard
               .writeText(output)
@@ -143,36 +135,14 @@
           }
         });
 
-      function togglePages() {
-        document.getElementById("value-form").style.display =
-          document.getElementById("value-form").style.display == "none"
-            ? "block"
-            : "none";
-
-        document.getElementById("updateValues").style.display =
-          document.getElementById("updateValues").style.display == "none"
-            ? "block"
-            : "none";
-
-        document.getElementById("titleUpdateValues").style.display =
-          document.getElementById("titleUpdateValues").style.display == "none"
-            ? "block"
-            : "none";
-
-        document.getElementById("power-form").style.display =
-          document.getElementById("power-form").style.display == "none"
-            ? "block"
-            : "none";
-
-        document.getElementById("updatePower").style.display =
-          document.getElementById("updatePower").style.display == "none"
-            ? "block"
-            : "none";
-
-        document.getElementById("titleUpdatePower").style.display =
-          document.getElementById("titleUpdatePower").style.display == "none"
-            ? "block"
-            : "none";
+      function togglePages(e) {
+        if (e.target.id === "updateValues") {
+          document.body.classList.add("updateValues");
+          document.body.classList.remove("updatePower");
+        } else {
+          document.body.classList.add("updatePower");
+          document.body.classList.remove("updateValues");
+        }
       }
 
       function calcularPercentual(valor, percentual) {
@@ -200,7 +170,7 @@
           console.log("power", power);
           element.setAttribute(
             "torqueScale",
-            calcularPercentual(power, newValue)
+            calcularPercentual(power, newValue),
           );
         });
 
@@ -225,7 +195,7 @@
           const xmlInput = document.getElementById("power-xml-input").value;
           document.getElementById("power-xml-input").value = "";
           const newPrice = document.getElementById(
-            "power-input-percentage"
+            "power-input-percentage",
           ).value;
 
           try {
