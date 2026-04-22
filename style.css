@@ -9,7 +9,7 @@ body {
   align-items: center;
   width: 60%;
   margin: 0 auto;
-  background-image: url("/public/img/bg-img.jpeg" );
+  background-image: url("public/img/bg-img.jpeg" );
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -18,7 +18,7 @@ body {
 
 @media (max-width: 768px) {
  body {
-  background-image: url("/public/img/bg-img-mob.png" );
+  background-image: url("public/img/bg-img-mob.png" );
   padding-top: 100px;
  }
 }
