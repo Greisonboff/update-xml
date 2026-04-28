@@ -1,33 +1,36 @@
-*{
-      font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-
+* {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    Segoe UI Symbol,
+    "Noto Color Emoji";
 }
 
 body {
   display: flex;
- 
-  background-image: url("public/img/page_bg_raw.jpg" );
+
+  background-image: url("public/img/page_bg_raw.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   justify-content: center;
-  
 }
 
 #main-container {
   display: flex;
-    align-items: center;
-     flex-direction: column;
-    width: 60%;
-    margin-top: 150px;
-  }
-
-
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  margin-top: 150px;
+}
 
 @media (max-width: 768px) {
-#main-container {
-  width: 80%;
-}
+  #main-container {
+    width: 80%;
+  }
 }
 
 .button-container-header {
@@ -35,8 +38,8 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 20px;
-  
- min-height: 40px;
+
+  min-height: 40px;
   width: 100%;
   padding: 4px;
 }
@@ -56,12 +59,13 @@ h1 {
   margin-bottom: 0px;
   color: #ffffff;
 }
-p{
+p {
   color: #ffffff;
 }
 
-.forms-container,#output-container {
-  background-color: rgba(255, 255, 255, .6);
+.forms-container,
+#output-container {
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -113,8 +117,7 @@ p{
   button {
     border: none;
     background-color: #0f172a;
-    
-;
+
     color: white;
     cursor: pointer;
   }
@@ -160,15 +163,14 @@ body.updatePower {
   display: none;
   margin-top: 24px;
 
-  pre{
+  pre {
     background-color: #f1f5f9;
     padding: 14px 8px;
     border-radius: 8px;
     width: calc(100% - 16px);
     overflow: auto;
-   
   }
-   margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .output-container-header {
@@ -176,24 +178,29 @@ body.updatePower {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  button{
+  button {
     width: fit-content;
     padding: 0 24px;
   }
-  h2{
+  h2 {
     width: fit-content !important;
   }
 }
 
-#copy-button{
+#copy-button {
   margin-right: 30px;
 }
 
-#close-button{
+#close-button {
   font-weight: bolder;
   cursor: pointer;
   position: absolute;
   font-size: 22px;
   top: 10px;
   right: 15px;
+}
+
+header{
+  position: absolute;
+  left: 20px;
 }
