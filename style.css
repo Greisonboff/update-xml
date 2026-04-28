@@ -5,22 +5,29 @@
 
 body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
-  margin: 0 auto;
-  background-image: url("public/img/bg-img.jpeg" );
+ 
+  background-image: url("public/img/page_bg_raw.jpg" );
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   justify-content: center;
+  
 }
 
+#main-container {
+  display: flex;
+    align-items: center;
+     flex-direction: column;
+    width: 60%;
+    margin-top: 150px;
+  }
+
+
+
 @media (max-width: 768px) {
- body {
-  background-image: url("public/img/bg-img-mob.png" );
-  padding-top: 100px;
- }
+#main-container {
+  width: 80%;
+}
 }
 
 .button-container-header {
@@ -47,7 +54,6 @@ body {
 
 h1 {
   margin-bottom: 0px;
-  padding-top: 100px;
   color: #ffffff;
 }
 p{
@@ -143,7 +149,14 @@ body.updatePower {
   }
 }
 
+#output {
+  width: 100%;
+  max-height: 250px;
+  overflow: auto;
+}
+
 #output-container {
+  position: relative;
   display: none;
   margin-top: 24px;
 
@@ -153,7 +166,9 @@ body.updatePower {
     border-radius: 8px;
     width: calc(100% - 16px);
     overflow: auto;
+   
   }
+   margin-bottom: 25px;
 }
 
 .output-container-header {
@@ -168,4 +183,17 @@ body.updatePower {
   h2{
     width: fit-content !important;
   }
+}
+
+#copy-button{
+  margin-right: 30px;
+}
+
+#close-button{
+  font-weight: bolder;
+  cursor: pointer;
+  position: absolute;
+  font-size: 22px;
+  top: 10px;
+  right: 15px;
 }

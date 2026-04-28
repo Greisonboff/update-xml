@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="updateValues">
-    
-
-      <h1>FS22 — Editor de Veículos XML</h1>
+    <div id="main-container">
       
+   
+    <h1>FS22 — Editor de Veículos XML</h1>
+
     <p>Atualize preços e potência dos seus veículos</p>
-    
+
     <div class="button-container-header">
       <button id="updateValues" onclick="togglePages(event)">
         Atualizar Valores
@@ -21,67 +22,67 @@
         Aumento de Potencia de veiculos
       </button>
     </div>
-    
+
     <div class="forms-container">
       <h2 id="price">Atualizador de Preços</h2>
       <h2 id="power">Atualizador de Potência</h2>
-      
+
       <form id="value-form">
         <label for="xml-input">XML:</label>
         <textarea
-        id="xml-input"
-        rows="8"
-        cols="50"
-        placeholder="Cole o XML aqui"
+          id="xml-input"
+          rows="8"
+          cols="50"
+          placeholder="Cole o XML aqui"
         ></textarea>
-        
+
         <label for="new-price">Novo Valor para price:</label>
         <input
-        type="nu"
-        mber
-        id="new-price"
+          type="nu"
+          mber
+          id="new-price"
           placeholder="Insira o novo preço"
           required
-          />
-          
-          <button type="submit">Atualizar Preços</button>
-        </form>
-        
-        <form id="power-form">
-          <label for="power-input">XML:</label>
-          <textarea
+        />
+
+        <button type="submit">Atualizar Preços</button>
+      </form>
+
+      <form id="power-form">
+        <label for="power-input">XML:</label>
+        <textarea
           id="power-xml-input"
           rows="8"
           cols="50"
           placeholder="Cole o XML aqui"
-          ></textarea>
-          
-          <label for="new-price">Porcentagem de aumento de potência:</label>
-          <div class="percentage-container">
-            <input type="number" id="power-input-percentage" placeholder="0" />
-            <span class="percentage-symbol">%</span>
-          </div>
-          
-          <button type="submit">Atualizar Potência</button>
-        </form>
+        ></textarea>
+
+        <label for="new-price">Porcentagem de aumento de potência:</label>
+        <div class="percentage-container">
+          <input type="number" id="power-input-percentage" placeholder="0" />
+          <span class="percentage-symbol">%</span>
+        </div>
+
+        <button type="submit">Atualizar Potência</button>
+      </form>
     </div>
 
     <div id="output-container">
-<div class="output-container-header">
-  
-  <h2>XML Atualizado</h2>
-  <button id="copy-button">Copiar Resultado</button>
-</div>
-<pre id="output"></pre>
-</div>
+      <div id="close-button" >x</div>
+      <div class="output-container-header">
+        <h2>XML Atualizado</h2>
+        <button id="copy-button">Copiar Resultado</button>
+      </div>
+      <pre id="output"></pre>
+    </div>
 
-<script>
-  function replacePricesInXML(xmlString, newValue) {
-    const parser = new DOMParser();
-    
-    const xmlDoc = parser.parseFromString(xmlString, "text/xml");
-    const priceElements = xmlDoc.querySelectorAll("[price]");
-    priceElements.forEach((element) => {
+    <script>
+      function replacePricesInXML(xmlString, newValue) {
+        const parser = new DOMParser();
+
+        const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+        const priceElements = xmlDoc.querySelectorAll("[price]");
+        priceElements.forEach((element) => {
           element.setAttribute("price", newValue);
         });
 
@@ -113,6 +114,8 @@
           }
 
           document.getElementById("output-container").style.display = "block";
+          document.querySelector(".forms-container").style.display = "none";
+         
         });
 
       document
@@ -121,6 +124,8 @@
           const output = document.getElementById("output").textContent;
           document.getElementById("output").textContent = "";
           document.getElementById("output-container").style.display = "none";
+          document.querySelector(".forms-container").style.display = "block";
+
           if (output) {
             navigator.clipboard
               .writeText(output)
@@ -133,6 +138,13 @@
           } else {
             alert("Nada para copiar!");
           }
+        });
+
+      document
+        .getElementById("close-button")
+        .addEventListener("click", function () {
+          document.getElementById("output-container").style.display = "none";
+          document.querySelector(".forms-container").style.display = "block";
         });
 
       function togglePages(e) {
@@ -207,7 +219,11 @@
           }
 
           document.getElementById("output").style.display = "block";
+
+          document.getElementById("output-container").style.display = "block";
+          document.querySelector(".forms-container").style.display = "none";
         });
     </script>
+     </div>
   </body>
 </html>
